@@ -2,7 +2,7 @@
 
 C# attribute and extensions for setting and retrieving enum display names.
 
-[![Build status]()](https://ci.appveyor.com/project/EnableSoftware/enumdisplayname)
+[![Build status](https://ci.appveyor.com/api/projects/status/xmequ026wc2gptxl?svg=true)](https://ci.appveyor.com/project/EnableSoftware/enable-enumdisplayname)
 
 ## EnumDisplayNameAttribute
 
