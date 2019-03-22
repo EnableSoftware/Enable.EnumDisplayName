@@ -16,7 +16,7 @@ namespace Enable.EnumDisplayName
             });
 
             // Assert
-            Assert.Throws(typeof(ArgumentNullException), action);
+            Assert.Throws<ArgumentNullException>(action);
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace Enable.EnumDisplayName
             });
 
             // Assert
-            Assert.Throws(typeof(ArgumentException), action);
+            Assert.Throws<ArgumentException>(action);
         }
 
         [Fact]
@@ -46,7 +46,7 @@ namespace Enable.EnumDisplayName
             });
 
             // Assert
-            Assert.Throws(typeof(ArgumentNullException), action);
+            Assert.Throws<ArgumentNullException>(action);
         }
 
         [Fact]
@@ -63,7 +63,7 @@ namespace Enable.EnumDisplayName
             });
 
             // Assert
-            Assert.Throws(typeof(ArgumentException), action);
+            Assert.Throws<ArgumentException>(action);
         }
 
         [Fact]
@@ -80,7 +80,7 @@ namespace Enable.EnumDisplayName
             });
 
             // Assert
-            Assert.Throws(typeof(ArgumentNullException), action);
+            Assert.Throws<ArgumentNullException>(action);
         }
 
         [Fact]
