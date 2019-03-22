@@ -1,5 +1,5 @@
 ﻿using System;
-using Ploeh.AutoFixture;
+using AutoFixture;
 using Xunit;
 
 namespace Enable.EnumDisplayName
@@ -38,7 +38,7 @@ namespace Enable.EnumDisplayName
             });
 
             // Assert
-            Assert.Throws(typeof(InvalidOperationException), action);
+            Assert.Throws<InvalidOperationException>(action);
         }
 
         [Fact]
@@ -54,7 +54,7 @@ namespace Enable.EnumDisplayName
             });
 
             // Assert
-            Assert.Throws(typeof(InvalidOperationException), action);
+            Assert.Throws<InvalidOperationException>(action);
         }
 
         [Fact]
