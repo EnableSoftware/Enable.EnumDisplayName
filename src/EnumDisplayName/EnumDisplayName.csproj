@@ -5,6 +5,18 @@
     <CodeAnalysisRuleSet>../../CustomExtendedCorrectnessRules.ruleset</CodeAnalysisRuleSet>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
+  
+  <PropertyGroup>
+    <AssemblyName>Enable.EnumDisplayName</AssemblyName>
+    <Version></Version>
+    <Authors>Enable</Authors>
+    <Description>C# attribute and extensions for setting and retrieving enum display names.</Description>
+    <Copyright>Copyright © Enable</Copyright>
+    <PackageProjectUrl>https://github.com/EnableSoftware/Enable.EnumDisplayName</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/EnableSoftware.png</PackageIconUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/EnableSoftware/Enable.EnumDisplayName/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/EnableSoftware/Enable.EnumDisplayName</RepositoryUrl>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Enable.Common.Argument" Version="2.0.0" />
