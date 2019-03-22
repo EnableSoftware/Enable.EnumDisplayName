@@ -1,5 +1,5 @@
 ﻿using System;
-using Ploeh.AutoFixture;
+using AutoFixture;
 using Xunit;
 
 namespace Enable.EnumDisplayName
