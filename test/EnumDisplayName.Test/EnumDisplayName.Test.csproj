@@ -92,12 +92,6 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\EnumDisplayName\EnumDisplayName.csproj">
-      <Project>{e82e2f73-7cf5-4456-9d12-f6606b11365c}</Project>
-      <Name>EnumDisplayName</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\InternalMockEnum.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>InternalMockEnum.Designer.cs</LastGenOutput>
