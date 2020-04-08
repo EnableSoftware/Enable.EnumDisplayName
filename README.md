@@ -48,3 +48,15 @@ Otherwise the method will return the field name of the enum.
 ```c#
 var displayName = Enum.EnumValue.GetDisplayName();
 ```
+
+## EnumExtensions.GetFlagsDisplayName()
+
+If the EnumDisplayNameAttribute had been applied to an flag enum this method returns the display names set using this attribute in a comma seperated string.
+
+If the System.ComponentModel.DataAnnotations.DisplayAttribute has been applied to an enum, and the EnumDisplayNameAttribute has not been applied, this method returns the display name set using this attribute.
+
+Otherwise the method will return the field name of the enum.
+
+```c#
+var displayName = (Enum.EnumValue1 | Enum.EnumValue2).GetFlagsDisplayName();
+```
