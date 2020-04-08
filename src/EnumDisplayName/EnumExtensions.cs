@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -37,7 +36,10 @@ namespace Enable.EnumDisplayName
 
                 if (string.Compare(fieldName, field.Name, StringComparison.Ordinal) == 0)
                 {
-                    var fieldAttributes = field.GetCustomAttributes(false).Cast<Attribute>();
+                    var fieldAttributes = field
+                        .GetCustomAttributes(false)
+                        .Cast<Attribute>();
+
                     return GetNameFromEnumField(enumValue, fieldAttributes);
                 }
             }
@@ -96,14 +98,18 @@ namespace Enable.EnumDisplayName
         {
             var enumType = enumValue.GetType();
             var fieldName = Enum.GetName(enumType, enumValue);
-            var enumDisplayNameAttribute = fieldAttributes.OfType<EnumDisplayNameAttribute>().FirstOrDefault();
+            var enumDisplayNameAttribute = fieldAttributes
+                .OfType<EnumDisplayNameAttribute>()
+                .FirstOrDefault();
 
             if (enumDisplayNameAttribute != null)
             {
                 return enumDisplayNameAttribute.GetDisplayName();
             }
 
-            var displayNameAttribute = fieldAttributes.OfType<DisplayAttribute>().FirstOrDefault();
+            var displayNameAttribute = fieldAttributes
+                .OfType<DisplayAttribute>()
+                .FirstOrDefault();
 
             if (displayNameAttribute != null)
             {
