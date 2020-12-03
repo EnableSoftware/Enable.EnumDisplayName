@@ -63,7 +63,7 @@ namespace Enable.EnumDisplayName
             var enumType = enumValue.GetType();
             var fieldNames = Enum.GetNames(enumType);
             var fields = enumType.GetFields()
-                .Where(o => fieldNames.Contains(o.Name, StringComparer.OrdinalIgnoreCase))
+                .Where(o => fieldNames.Contains(o.Name, StringComparer.Ordinal))
                 .ToArray();
 
             var fieldPosition = 0;
