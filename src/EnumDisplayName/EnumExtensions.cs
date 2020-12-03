@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text;
 
 #if NETSTANDARD1_3
 using System.Reflection;
@@ -62,11 +63,11 @@ namespace Enable.EnumDisplayName
             var enumType = enumValue.GetType();
             var fieldNames = Enum.GetNames(enumType);
             var fields = enumType.GetFields()
-                .Where(o => fieldNames.Any(p => p == o.Name))
+                .Where(o => fieldNames.Contains(o.Name, StringComparer.OrdinalIgnoreCase))
                 .ToArray();
 
             var fieldPosition = 0;
-            var result = string.Empty;
+            var result = new StringBuilder();
             foreach (Enum currentValue in Enum.GetValues(enumType))
             {
                 if (enumValue.HasFlag(currentValue))
@@ -84,14 +85,14 @@ namespace Enable.EnumDisplayName
 
                     var fieldName = GetNameFromEnumField(enumValue, fieldAttributes);
 
-                    result = result == string.Empty ? fieldName
-                         : result + "," + fieldName;
+                    var resultPartToAdd = result.Length == 0 ? fieldName : "," + fieldName;
+                    result.Append(resultPartToAdd);
                 }
 
                 fieldPosition += 1;
             }
 
-            return result;
+            return result.ToString();
         }
 
         private static string GetNameFromEnumField(Enum enumValue, IEnumerable<Attribute> fieldAttributes)
